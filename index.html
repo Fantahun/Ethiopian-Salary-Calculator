@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>Ethiopian Salary Calculator</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Ethiopian Salary Calculator</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <h1>Ethiopian Salary Calculator</h1>
+    <form>
+      <input
+        type="number"
+        id="gross_salary"
+        placeholder="Enter your Gross Salary"
+      />
+      <br />
+      <button type="button" id="calculate_salary" onclick="calculateSalary()">
+        CALCULATE
+      </button>
+    </form>
 
-	<h1>Ethiopian Salary Calculator</h1>
-	<form>
-		<input type="number" id="gross_salary" placeholder="Enter your Gross Salary"> <br/>
-		<button type="button" id="calculate_salary" onclick="calculateSalary()">CALCULATE</button>
-	</form>
+    <p id="result"></p>
 
-	<p id="result"></p>
-
-	<script type="text/javascript" src="app.js"></script>
-</body>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>
