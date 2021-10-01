@@ -18,7 +18,8 @@ body {
 h1 {
   margin-bottom: 20px;
   letter-spacing: 2px;
-  font-family: hello;
+  /* font-family: hello; */
+  font-family: Tahoma, sans-serif;
   color: #17212b;
 }
 
@@ -73,8 +74,9 @@ button:hover{
   line-height: 1.5em;
 }
 
-hr {
-  color: whitesmoke;
-  border-color: whitesmoke;
-  margin: 5px;
+#netSalRes {
+  background-color: #17212b;
+  color: antiquewhite;
+  padding: 5px;
+  font-size: x-large;
 }

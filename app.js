@@ -6,17 +6,20 @@
 // handle the enter key clicked event and fire the calculate function
 const log = document.getElementById('calculate_salary');
 
-document.addEventListener('keypress', logKey);
+document.addEventListener('keydown', logKey);
 
 function logKey(e) {
   // log.textContent += ` ${e.code}`;
   if(e.code == 'Enter'){
     calculateSalary();
+    e.preventDefault(); //prevent reloading when the enter key is pressed
    
   }
+
 }
 
 function calculateSalary() {
+
   var gross_salary, income_tax, Pension, net_salary, result;
   gross_salary = parseFloat(
     document.getElementById("gross_salary").value
@@ -75,10 +78,12 @@ function calculateSalary() {
     "<br/>" +
     "ጡረታ | Pension = " +
     pension +
-    " ETB" +
-    "<br/> <hr/>" +
+    " ETB";
+    
+    var netRes = document.getElementById('netSalRes').innerHTML = 
     "ደራሽ ደመወዝ | Net Salary = " +
     net_salary +
-    " ETB <br/> <hr/>";
+    " ETB <br/>";
+   
     return false;
 }
