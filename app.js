@@ -2,6 +2,20 @@
 *********		Formulas
 	pension
 */
+
+// handle the enter key clicked event and fire the calculate function
+const log = document.getElementById('calculate_salary');
+
+document.addEventListener('keypress', logKey);
+
+function logKey(e) {
+  // log.textContent += ` ${e.code}`;
+  if(e.code == 'Enter'){
+    calculateSalary();
+   
+  }
+}
+
 function calculateSalary() {
   var gross_salary, income_tax, Pension, net_salary, result;
   gross_salary = parseFloat(
@@ -62,8 +76,9 @@ function calculateSalary() {
     "ጡረታ | Pension = " +
     pension +
     " ETB" +
-    "<br/>" +
+    "<br/> <hr/>" +
     "ደራሽ ደመወዝ | Net Salary = " +
     net_salary +
-    " ETB";
+    " ETB <br/> <hr/>";
+    return false;
 }
