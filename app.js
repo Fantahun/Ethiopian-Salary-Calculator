@@ -4,20 +4,29 @@
 */
 
 // handle the enter key clicked event and fire the calculate function
-const log = document.getElementById('calculate_salary');
+// const log = document.getElementById('calculate_salary');
 
-document.addEventListener('keydown', logKey);
+// document.addEventListener('keydown', logKey);
 
-function logKey(e) {
-  // log.textContent += ` ${e.code}`;
-  if(e.code == 'Enter'){
-    calculateSalary();
-    e.preventDefault(); //prevent reloading when the enter key is pressed
+// function logKey(e) {
+//   // log.textContent += ` ${e.code}`;
+//   if(e.code == 'Enter'){
+//     e.preventDefault(); //prevent reloading when the enter key is pressed
+//     calculateSalary();
    
-  }
+//   }
+// }
 
-}
 
+// handle the form submit action and call the calculate function
+var salaryForm = document.getElementById("salaryCalcForm");
+
+salaryForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+  calculateSalary();
+});
+
+// function that clalculates the salary
 function calculateSalary() {
 
   var gross_salary, income_tax, Pension, net_salary, result;
@@ -85,5 +94,5 @@ function calculateSalary() {
     net_salary +
     " ETB <br/>";
    
-    return false;
+    // return false;
 }

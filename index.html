@@ -6,23 +6,29 @@
       <link rel="stylesheet" type="text/css" href="style.css" />
     </head>
     <body>
-      <h1>Ethiopian Salary Calculator</h1>
-      <form>
-        <input
-          type="number"
-          id="gross_salary"
-          placeholder="your Gross Salary"
-        />
-        <br />
-        <!-- making it type="button" makes the element not to act as submit and it wont disapear after showing result of the final calculation  -->
-        <button type="button" id="calculate_salary" onclick="calculateSalary()">
-          CALCULATE
-        </button>
-      </form>
+      <main>
+        <h1>Ethiopian Salary Calculator</h1>
+        <form id="salaryCalcForm">
+          <label for="gross_salary" id="salLabel">Gross Salary
+          </label>
+          <input
+            type="number"
+            id="gross_salary"
+          
+          />
+          <br />
+          <!-- making it type="button" makes the element not to act as submit and it wont disapear after showing result of the final calculation  -->
+          <!-- <button type="submit" id="calculate_salary" onclick="calculateSalary()"> -->
+          <button type="submit" id="calculate_salary">
 
-      <p id="result">
-      </p>
-      <p id="netSalRes"></p>
+            CALCULATE
+          </button>
+        </form>
+
+        <p id="result">
+        </p>
+        <p id="netSalRes"></p>
+      </main>
 
       <script type="text/javascript" src="app.js"></script>
     </body>
